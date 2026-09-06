@@ -1,0 +1,698 @@
+/* ==============================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, "Noto Sans Thai", sans-serif;
+    background: #0b0f19;
+    color: #ffffff;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ==============================
+   NAVBAR
+================================ */
+
+.navbar {
+    width: 100%;
+    padding: 22px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(11, 15, 25, 0.85);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #202638;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #6c63ff;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    color: #aab1c5;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #6c63ff;
+}
+
+
+/* ==============================
+   HERO
+================================ */
+
+.hero {
+    min-height: 90vh;
+    padding: 80px 10%;
+
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    align-items: center;
+    gap: 80px;
+
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(108, 99, 255, 0.18),
+            transparent 35%
+        );
+}
+
+.welcome {
+    color: #6c63ff;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    margin: 15px 0;
+
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1.15;
+}
+
+.hero h1 span {
+    color: #6c63ff;
+}
+
+.description {
+    max-width: 600px;
+    color: #aab1c5;
+    font-size: 18px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 13px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn.primary {
+    background: #6c63ff;
+}
+
+.btn.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(108, 99, 255, 0.3);
+}
+
+.btn.secondary {
+    border: 1px solid #343b50;
+    color: #cdd2df;
+}
+
+.btn.secondary:hover {
+    border-color: #6c63ff;
+    color: #6c63ff;
+}
+
+
+/* ==============================
+   PROFILE CARD
+================================ */
+
+.hero-card {
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background: #121827;
+    border: 1px solid #242c40;
+    border-radius: 25px;
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ==============================
+   PROFILE IMAGE
+   ใช้กับหน้าแรกเท่านั้น
+================================ */
+
+.project-image1 {
+    width: 160px;
+    height: 160px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    display: block;
+
+    background: #121827;
+
+    border: 3px solid #6c63ff;
+}
+
+.project-image1 img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ==============================
+   HERO CARD TEXT
+================================ */
+
+.hero-card h2 {
+    font-size: 28px;
+}
+
+.hero-card p {
+    color: #9299ad;
+}
+
+
+/* ==============================
+   SOCIAL
+================================ */
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.social a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #343b50;
+    border-radius: 50%;
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+.social a:hover {
+    background: #6c63ff;
+    border-color: #6c63ff;
+}
+
+
+/* ==============================
+   SECTION
+================================ */
+
+.section {
+    padding: 100px 10%;
+}
+
+.section-title {
+    margin-bottom: 45px;
+}
+
+.section-title p {
+    color: #6c63ff;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+}
+
+
+/* ==============================
+   ABOUT
+================================ */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.about-box {
+    padding: 30px;
+
+    background: #121827;
+    border: 1px solid #242c40;
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+.about-box:hover {
+    transform: translateY(-8px);
+    border-color: #6c63ff;
+}
+
+.icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.about-box h3 {
+    margin-bottom: 10px;
+}
+
+.about-box p {
+    color: #9299ad;
+}
+
+
+/* ==============================
+   SKILLS
+================================ */
+
+.skills-section {
+    background: #0e1421;
+}
+
+.skills {
+    max-width: 800px;
+}
+
+.skill {
+    margin-bottom: 25px;
+}
+
+.skill > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.progress {
+    width: 100%;
+    height: 8px;
+
+    background: #242c40;
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress span {
+    display: block;
+    height: 100%;
+
+    background: #6c63ff;
+    border-radius: 20px;
+}
+
+
+/* ==============================
+   PORTFOLIO HEADER
+================================ */
+
+.portfolio-header {
+    padding: 100px 10% 70px;
+    text-align: center;
+}
+
+.portfolio-header p {
+    color: #6c63ff;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.portfolio-header h1 {
+    margin: 15px 0;
+
+    font-size: clamp(40px, 6vw, 65px);
+}
+
+.portfolio-header span {
+    color: #9299ad;
+}
+
+
+/* ==============================
+   PROJECTS
+================================ */
+
+.projects {
+    padding: 20px 10% 100px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    overflow: hidden;
+
+    background: #121827;
+    border: 1px solid #242c40;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: #6c63ff;
+}
+
+
+/* ==============================
+   PROJECT IMAGE
+================================ */
+
+.project-image {
+    width: 100%;
+    height: 220px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/* รูปของ Project */
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    /*
+       contain = เห็นรูปทั้งหมด
+       ไม่ถูกตัด
+    */
+    object-fit: contain;
+
+    object-position: center;
+
+    background: #0b0f19;
+}
+
+
+/* ==============================
+   PROJECT BACKGROUNDS
+================================ */
+
+.project-one {
+    background: linear-gradient(
+        135deg,
+        #6c63ff,
+        #3f3a99
+    );
+}
+
+.project-two {
+    background: linear-gradient(
+        135deg,
+        #00a8cc,
+        #005082
+    );
+}
+
+.project-three {
+    background: linear-gradient(
+        135deg,
+        #ff7b54,
+        #a83d22
+    );
+}
+
+.project-four {
+    background: linear-gradient(
+        135deg,
+        #22c55e,
+        #126b35
+    );
+}
+
+
+/* ==============================
+   PROJECT CONTENT
+================================ */
+
+.project-content {
+    padding: 30px;
+}
+
+.project-type {
+    color: #6c63ff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.project-content h2 {
+    margin: 8px 0;
+}
+
+.project-content > p:not(.project-type) {
+    color: #9299ad;
+}
+
+
+/* ==============================
+   TAGS
+================================ */
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin: 20px 0;
+}
+
+.tags span {
+    padding: 5px 12px;
+
+    border: 1px solid #343b50;
+    border-radius: 20px;
+
+    color: #b9bfd0;
+    font-size: 12px;
+}
+
+
+/* ==============================
+   PROJECT LINK
+================================ */
+
+.project-link {
+    color: #6c63ff;
+    font-weight: bold;
+}
+
+
+/* ==============================
+   CONTACT
+================================ */
+
+.contact {
+    padding: 100px 10%;
+    text-align: center;
+
+    background: #0e1421;
+}
+
+.contact > p {
+    color: #6c63ff;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.contact h2 {
+    margin: 10px 0;
+    font-size: 40px;
+}
+
+.contact > span {
+    color: #9299ad;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.contact-buttons a {
+    padding: 10px 20px;
+
+    border: 1px solid #343b50;
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.contact-buttons a:hover {
+    background: #6c63ff;
+    border-color: #6c63ff;
+}
+
+
+/* ==============================
+   FOOTER
+================================ */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    color: #6f768a;
+    font-size: 13px;
+
+    border-top: 1px solid #202638;
+}
+
+
+/* ==============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 70px 7%;
+        text-align: center;
+    }
+
+    .description {
+        margin: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .section {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+}
+
+
+/* ==============================
+   MOBILE
+================================ */
+
+@media (max-width: 500px) {
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .navbar nav a {
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    /* รูปโปรไฟล์มือถือ */
+    .project-image1 {
+        width: 130px;
+        height: 130px;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .portfolio-header h1 {
+        font-size: 38px;
+    }
+
+    .contact h2 {
+        font-size: 30px;
+    }
+
+    /* Project มือถือ */
+    .project-image {
+        height: 200px;
+    }
+}
